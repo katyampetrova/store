@@ -1,0 +1,27 @@
+footer {
+    background: black;
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Arial", serif;
+    letter-spacing: 3px;
+    color: white;
+}
+
+footer span {
+    font-size: 1.5em;
+}
