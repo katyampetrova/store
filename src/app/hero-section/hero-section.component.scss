@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 73%), rgba(0, 0, 0, 53%)), url("https://webnews.bg/uploads/images/49/9649/259649/768x432.jpg?_=1477556832");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Arial", serif;
+    text-transform: uppercase;
+    letter-spacing: 4.3px;
+  }
