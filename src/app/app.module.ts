@@ -6,17 +6,26 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { RecentAdsComponent } from './recent-ads/recent-ads.component';
+import { MainComponent } from './main/main.component';
+import { TestComponent } from './test/test.component';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    RecentAdsComponent,
+    MainComponent,
+    TestComponent,
   ],
   imports: [
+    AuthModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

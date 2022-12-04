@@ -8,15 +8,15 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
+    // position: fixed;
     left: 0;
     right: 0;
-  }
+}
   
   /* Place text in the middle of the image */
   .hero-text {
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -24,4 +24,4 @@ body, html {
     font-family: "Arial", serif;
     text-transform: uppercase;
     letter-spacing: 4.3px;
-  }
+}
