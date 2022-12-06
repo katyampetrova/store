@@ -14,7 +14,7 @@ export class LoginComponent {
             email: 'hswq@abv.bg',
             username: 'john'
         }
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
     }
 
 }

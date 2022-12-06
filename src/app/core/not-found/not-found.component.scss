@@ -1,0 +1,57 @@
+.table {
+    display: table;
+    width: 100%;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 40vmin;
+    text-align: center;
+    line-height: 30vh;
+    margin: 6vh 0 10vh 0;
+    color: rgba(rgb(255, 255, 255), 0.7);
+    text-shadow: 1px 2px 5px rgba(darken(#1C1921, 50%), 0.5);
+}
+h2 {
+    font-weight: 100;
+    color: rgba(rgb(0, 0, 0), 0.7);
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 2.5vmin;
+}
+.mainbox {
+    height: 100vmin;
+}
+
+.holder {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container {
+margin: 0 auto;
+    width: 100%;
+    max-width: 1190px;
+    position: relative;
+    padding: 0 30px;
+}
+button {
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    background: transparent;
+    color: rgb(0, 0, 0);
+    padding: 20px 60px;
+    font-size: 2vmin;
+    letter-spacing: 0.25vmin;
+    margin: 3vh 0;
+    transition: all 0.2s;
+    opacity: 0.85;
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}

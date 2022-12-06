@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Literata&display=swap');
+
+body {
+  font-family: 'Literata', serif;
+}
+
+header {
+  background: steelblue;
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  z-index: -99;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-left: 1em;
+  margin-bottom: 0;
+  color: white;
+}
+
+header h3 {
+  margin-top: 0;
+  margin-left: 2em;
+  font-size: 1.3em;
+  color: white;
+  font-weight: 500;
+}
+
+[data-product-detail] {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  background: white;
+  box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-product-detail] .img-card {
+  width: 40%;
+  height: 80%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.img-card .img {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-card .img i {
+  color: skyblue;
+  margin-left: 21em;
+  margin-top: 10px;
+}
+.img-card .img img {
+  width: 70%;
+  height: 200px;
+  position: relative;
+  left: 60px;
+  top: 20px;
+}
+
+.img-card .img-options {
+  border-top: 1px solid lightgrey;
+}
+
+[data-product-detail] .product-details {
+  height: 80%;
+  width: 50%;
+/*   border: 1px solid teal; */
+  padding-left: 20px;
+}
+
+.product-details h2 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.product-details p:first-of-type {
+  margin: 0;
+}
+
+
+.product-details p:nth-of-type(2) {
+  color: grey;
+  margin-bottom: 0;
+}
+
+.product-details p:nth-of-type(4) {
+  margin-top: 0;
+}
+
+.product-details p:nth-of-type(4) span:first-of-type {
+  font-weight: 800;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.product-details p:nth-of-type(4) span:nth-of-type(2) {
+  text-decoration: line-through;
+}
+
+.product-details p:nth-of-type(4) span:nth-of-type(3) {
+  color: teal;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.product-details p:nth-of-type(5) {
+  color: grey;
+  font-size: 14px;
+}
+
+button {
+  width: 170px;
+  height: 35px;
+  border: none;
+  margin-top: 14px;
+  font-family: 'Literata', serif;
+}
+
+button:first-of-type {
+  background: #4FC3F7;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:nth-of-type(2) {
+  background: white;
+  border: 2px solid #4FC3F7;
+  border-radius: 4px;
+}
+

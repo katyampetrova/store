@@ -15,25 +15,25 @@ header {
       display: flex;
       height: 70px;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       position: relative;
     }
   
-    .logo {
-      display: block;
-      width: 76px;
-      height: 90px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: white;
-      text-align: center;
+    // .logo {
+    //   display: block;
+    //   width: 76px;
+    //   height: 90px;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-color: white;
+    //   text-align: center;
   
-      img {
-        width: 45px;
-        margin-top: 10px;
-      }
-    }
+    //   img {
+    //     width: 45px;
+    //     margin-top: 10px;
+    //   }
+    // }
   
     nav {
       display: none;

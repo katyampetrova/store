@@ -6,22 +6,24 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
-import { RecentAdsComponent } from './recent-ads/recent-ads.component';
 import { MainComponent } from './main/main.component';
 import { TestComponent } from './test/test.component';
 import { AuthModule } from './auth/auth.module';
+import { RecentAdsComponent } from './ads/recent-ads/recent-ads.component';
+import { AdsModule } from './ads/ads.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroSectionComponent,
-    RecentAdsComponent,
+    // RecentAdsComponent,
     MainComponent,
     TestComponent,
   ],
   imports: [
     AuthModule,
+    AdsModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
