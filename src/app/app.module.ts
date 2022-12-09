@@ -11,6 +11,8 @@ import { TestComponent } from './test/test.component';
 import { AuthModule } from './auth/auth.module';
 import { RecentAdsComponent } from './ads/recent-ads/recent-ads.component';
 import { AdsModule } from './ads/ads.module';
+import { appInterceptorProvider } from './app.interceptor';
+import { AutenticateComponent } from './autenticate/autenticate.component';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { AdsModule } from './ads/ads.module';
     // RecentAdsComponent,
     MainComponent,
     TestComponent,
+    AutenticateComponent,
   ],
   imports: [
     AuthModule,
@@ -29,7 +32,9 @@ import { AdsModule } from './ads/ads.module';
     CoreModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

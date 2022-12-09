@@ -5,6 +5,7 @@ import { AdDetailsComponent } from './ad-details/ad-details.component';
 import { AdsListComponent } from './ads-list/ads-list.component';
 import { AddCreateComponent } from './add-create/add-create.component';
 import { AdsRoutingModule } from './ads-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { AdsRoutingModule } from './ads-routing.module';
   ],
   imports: [
     CommonModule,
-    AdsRoutingModule
+    AdsRoutingModule,
+    FormsModule
   ],
   exports: [
     RecentAdsComponent

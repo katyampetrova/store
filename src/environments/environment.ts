@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://store-server-8nnj.onrender.com/'
+  apiUrl: 'http://localhost:3030'
 };
 
 /*

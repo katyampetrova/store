@@ -1,27 +1,41 @@
 <div class="container">
     <h3>Регистрация</h3>
     
-    <form action="" method="" id="login-form">
+    <form #form="ngForm" id="login-form" (ngSubmit)="registerHandler(form)">
       <div class="form-field">
-        <label for="user-name">
-          Потребителско име
+        <label for="email">
+            Имейл
         </label>
-        <input type="text" name="user-name" id="user-name" size="50" required autofocus/>
+        <input  #emailInput="ngModel" type="text" name="email" id="email" size="50" email required ngModel />
       </div>
+      <ng-container *ngIf="emailInput.touched">
+        <p *ngIf="emailInput.errors?.['required']">Полето е задължително</p>
+        <p *ngIf="emailInput.errors?.['email']">Невалиден имейл</p>
+      </ng-container>
       
       <div class="form-field">
         <label for="pass">
           Парола
         </label>
-        <input type="password" name="password" id="pass" size="50" required />
+        <input type="password" #passwordInput="ngModel" name="password" id="pass" size="50" required ngModel minlength="6" />
       </div>
+
+      <ng-container *ngIf="passwordInput.touched">
+        <p *ngIf="passwordInput.errors?.['required']">Полето е задължително</p>
+        <p *ngIf="passwordInput.errors?.['minlength']">Паролата трябва да е дълга поне 6 символа</p>
+      </ng-container>
 
       <div class="form-field">
         <label for="repass">
           Повтори паролата
         </label>
-        <input type="password" name="repassword" id="repass" size="50" required />
+        <input type="password" name="repassword" id="repass" size="50" required ngModel  #repasswordInput="ngModel"  />
       </div>
+      <!-- TODO -->
+      <!-- <ng-container *ngIf="passwordInput.touched">
+        <p *ngIf="passwordInput.errors?.['required']">Полето е задължително</p>
+        <p *ngIf="passwordInput.errors?.['minlength']">Паролата трябва да е дълга поне 6 символа</p>
+      </ng-container> -->
       
       <div id="form-submit">
         <input type="submit" value="Регистрирай се" />

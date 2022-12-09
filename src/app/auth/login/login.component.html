@@ -1,23 +1,30 @@
 <div class="container">
     <h3>Вход</h3>
     
-    <form action="" method="" id="login-form">
+    <form #form="ngForm" id="login-form" (ngSubmit)="loginHandler(form)">
       <div class="form-field">
         <label for="user-name">
-          Потребителско име
+          Имейл
         </label>
-        <input type="text" name="user-name" id="user-name" size="50" required autofocus/>
+        <input #emailInput="ngModel" ngModel type="text" name="email" id="user-name" size="50" required email />
       </div>
+      <ng-container *ngIf="emailInput.touched">
+        <p *ngIf="emailInput.errors?.['required']">Error</p>
+        <p *ngIf="emailInput.errors?.['email']">Невалиден имейл</p>
+      </ng-container>
       
       <div class="form-field">
         <label for="pass">
           Парола
         </label>
-        <input type="password" name="password" id="pass" size="50" required />
+        <input #passwordInput="ngModel" ngModel type="password" name="password" id="pass" size="50" required />
       </div>
+      <ng-container *ngIf="passwordInput.touched">
+        <p *ngIf="emailInput.errors?.['required']">Error</p>
+      </ng-container>
       
       <div id="form-submit">
-        <input type="submit" value="Влез" />
+        <input [disabled]="form.invalid" type="submit" value="Влез" />
       </div>
     </form>
   

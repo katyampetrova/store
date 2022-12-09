@@ -1,1 +1,60 @@
-<p>add-create works!</p>
+<div class="container">
+    <h3>Създай нова обява</h3>
+    
+    <form #form="ngForm" id="create-form" (ngSubmit)="createHandler(form)">
+      <div class="form-field">
+        <label for="title">
+          Заглавие
+        </label>
+        <input #titleInput="ngModel" ngModel type="text" name="title" id="title" size="50" required />
+      </div>
+      <!-- <ng-container *ngIf="emailInput.touched">
+        <p *ngIf="emailInput.errors?.['required']">Error</p>
+        <p *ngIf="emailInput.errors?.['email']">Невалиден имейл</p>
+      </ng-container> -->
+
+      <div class="form-field">
+        <label for="desc">
+          Описание
+        </label>
+        <!-- <input #descInput="ngModel" ngModel type="text" name="desc" id="desc" size="200" required /> -->
+        <textarea #descInput="ngModel" rows="5" ngModel type="text" name="desc" id="desc" required></textarea>
+      </div>
+     
+      <!-- <ng-container *ngIf="passwordInput.touched">
+        <p *ngIf="emailInput.errors?.['required']">Error</p>
+      </ng-container> -->
+
+      <!-- <div class="form-field">
+        <label for="desc">
+          Цена
+        </label>
+        <input #priceInput="ngModel" ngModel type="number" name="price" id="price" required />
+      </div> -->
+
+      <div class="form-field">
+        <label for="desc">
+          Снимка
+        </label>
+        <input #imgInput="ngModel" ngModel type="text" name="img" id="img" required />
+      </div>
+
+      <div class="form-field">
+        <label for="tel">
+          Цена
+        </label>
+        <input #telInput="ngModel" ngModel type="number" name="tel" id="tel" required />
+      </div>
+
+      <div class="form-field">
+        <label for="city">
+          Град
+        </label>
+        <input #cityInput="ngModel" ngModel type="text" name="city" id="city" required />
+      </div>
+      
+      <div id="form-submit">
+        <input [disabled]="form.invalid" type="submit" value="Добави обявата" />
+      </div>
+    </form>
+</div>
