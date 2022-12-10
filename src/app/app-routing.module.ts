@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './core/error/error.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
-import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { MainComponent } from './main/main.component';
-import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
     {
@@ -14,6 +13,10 @@ const routes: Routes = [
     {
         path: 'not-found',
         component: NotFoundComponent
+    },
+    {
+        path: 'error',
+        component: ErrorComponent
     },
     {
         path: '**',

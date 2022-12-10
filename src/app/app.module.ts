@@ -13,6 +13,8 @@ import { RecentAdsComponent } from './ads/recent-ads/recent-ads.component';
 import { AdsModule } from './ads/ads.module';
 import { appInterceptorProvider } from './app.interceptor';
 import { AutenticateComponent } from './autenticate/autenticate.component';
+import { BehaviorSubject } from 'rxjs';
+import { API_ERROR } from './shared/constants';
 
 
 @NgModule({
@@ -33,7 +35,11 @@ import { AutenticateComponent } from './autenticate/autenticate.component';
     HttpClientModule
   ],
   providers: [
-    appInterceptorProvider
+    appInterceptorProvider,
+    {
+        provide: API_ERROR,
+        useValue: new BehaviorSubject(null)
+    }
   ],
   bootstrap: [AppComponent]
 })

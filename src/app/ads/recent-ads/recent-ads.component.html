@@ -4,10 +4,10 @@
         <li class="cards_item" *ngFor="let ad of ads">
         <div class="card">
             <a [routerLink]="['/ads/details/', ad._id]">
-                <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                <div class="card_image"><img src={{ad.img}}></div>
                 <div class="card_content">
                     <h2 class="card_title">{{ad.title}}</h2>
-                    <p class="card_text">{{ad.description}}</p>
+                    <p class="card_text">{{ad.description | shorten: 30}}</p>
                     <p class="card_text">{{ad.price}}</p>
                     <button class="btn card_btn">Read More</button>
                 </div>

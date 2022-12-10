@@ -6,6 +6,8 @@ import { AdsListComponent } from './ads-list/ads-list.component';
 import { AddCreateComponent } from './add-create/add-create.component';
 import { AdsRoutingModule } from './ads-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ShortenPipe } from '../shared/shorten.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AdsRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   exports: [
     RecentAdsComponent

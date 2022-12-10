@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IAd } from 'src/app/interfaces/ad';
 
 @Component({
   selector: 'app-ad-details',
@@ -8,11 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdDetailsComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { 
-    console.log(this.activatedRoute.snapshot.data?.['ad']);
-  }
+    ad: IAd | null = null;
 
-  ngOnInit(): void {
+    constructor(private activatedRoute: ActivatedRoute) { 
+        console.log(this.activatedRoute.snapshot.data?.['ad']);
+        this.ad = this.activatedRoute.snapshot.data?.['ad'];
+    }
+
+    ngOnInit(): void {
   }
 
 }

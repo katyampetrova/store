@@ -28,10 +28,10 @@ const routes: Routes = [
     {
         path: 'ads/list',
         component: AdsListComponent,
-        canActivate: [AuthActivate],
-        data: {
-            loginRequired: false
-        }
+        // canActivate: [AuthActivate],
+        // data: {
+        //     loginRequired: false
+        // }
     },
 ];
 

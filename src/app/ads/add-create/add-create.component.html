@@ -18,7 +18,7 @@
           Описание
         </label>
         <!-- <input #descInput="ngModel" ngModel type="text" name="desc" id="desc" size="200" required /> -->
-        <textarea #descInput="ngModel" rows="5" ngModel type="text" name="desc" id="desc" required></textarea>
+        <textarea #descInput="ngModel" rows="5" ngModel type="text" name="description" id="description" required></textarea>
       </div>
      
       <!-- <ng-container *ngIf="passwordInput.touched">
@@ -41,9 +41,16 @@
 
       <div class="form-field">
         <label for="tel">
-          Цена
+          Телефон за връзка
         </label>
         <input #telInput="ngModel" ngModel type="number" name="tel" id="tel" required />
+      </div>
+
+      <div class="form-field">
+        <label for="price">
+          Цена
+        </label>
+        <input #priceInput="ngModel" ngModel type="number" name="price" id="price" required />
       </div>
 
       <div class="form-field">
