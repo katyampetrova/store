@@ -30,7 +30,7 @@ export class LoginComponent {
         const {email, password} = form.value;
         this.authService.login(email, password)
         .subscribe(user => {
-            console.log(user);
+            // console.log(user);
             this.authService.user = user;
             this.router.navigate(['/']);
         });

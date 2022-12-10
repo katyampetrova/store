@@ -15,7 +15,7 @@ export class AutenticateComponent implements OnInit {
     this.authService.getProfile().subscribe({
         next: (user) => {
             this.authService.user = user;
-            console.log(user);
+            // console.log(user);
             this.isAuth = false;
         },
         error: (err) => {

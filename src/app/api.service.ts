@@ -14,16 +14,10 @@ export class ApiService {
     constructor(private httpClient: HttpClient) { }
 
     loadAds(limit?: number) {
-    //   return this.httpClient.get<ITheme[]>(`${apiURL}/themes`);
-        // return this.httpClient.get<IAd[]>(`${apiURL}/data/catalog`);
-        // TODO
         return this.httpClient.get<IAd[]>(`/api/data/catalog${limit ? `?limit=${limit}` : ``}`);
     }
 
     loadAd(id: number) {
-    //   return this.httpClient.get<ITheme[]>(`${apiURL}/themes`);
-        // return this.httpClient.get<IAd>(`${apiURL}/data/catalog/${id}`);
-        // TODO
         return this.httpClient.get<IAd>(`/api/data/catalog/${id}`);
     }
   
@@ -38,8 +32,8 @@ export class ApiService {
         })
     }
 
-    updateAd(id: string, title: string, description: string, img: string, price: number, tel: number, city: string) {
-        return this.httpClient.put<IAd>('/api/data/catalog', {
+    updateAd(id: string, title: string, description: string, price: number, img: string, tel: number, city: string) {
+        return this.httpClient.put<IAd>(`/api/data/catalog/${id}`, {
             _id: id,
             title: title,
             description: description,

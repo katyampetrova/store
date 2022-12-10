@@ -1,12 +1,10 @@
 <header>
     <div class="inner">
-        <!-- <div class="logo"><img src="https://t4.ftcdn.net/jpg/02/98/27/61/360_F_298276112_Xa5xbk8UNgzNozC0n3itmPyQO2alNZnl.jpg"></div> -->
-        <!-- <div class="burger"></div> -->
         <nav>
         <a class="active" href="#">Начало</a>
         <a routerLink="/ads/list">Всички обяви</a>
-        <a routerLink="/test/route">Обяви по градове</a>
-        <a routerLink="/ads/create">Създай обява</a>
+        <a *ngIf="isLoggedIn" routerLink="/test/route">Моите обяви</a>
+        <a *ngIf="isLoggedIn" routerLink="/ads/create">Създай обява</a>
         <a *ngIf="!isLoggedIn" routerLink="/auth/login" class="boredered">Влез</a>
         <a *ngIf="!isLoggedIn" routerLink="/auth/register" class="boredered">Регистрирай се</a>
         <a *ngIf="isLoggedIn" routerLink="/auth/profile" class="boredered">Профил</a>

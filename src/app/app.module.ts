@@ -15,6 +15,7 @@ import { appInterceptorProvider } from './app.interceptor';
 import { AutenticateComponent } from './autenticate/autenticate.component';
 import { BehaviorSubject } from 'rxjs';
 import { API_ERROR } from './shared/constants';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { API_ERROR } from './shared/constants';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     appInterceptorProvider,

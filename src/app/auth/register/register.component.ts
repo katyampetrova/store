@@ -14,7 +14,7 @@ export class RegisterComponent {
 
 
   registerHandler(form: NgForm): void {
-    console.log(form);
+    // console.log(form);
 
     if (form.invalid) {
         return;

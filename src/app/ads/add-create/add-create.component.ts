@@ -16,7 +16,7 @@ export class AddCreateComponent {
       if(form.invalid) {return;}
         const {title, description, price, img, tel, city } = form.value;
 
-        console.log(title, description, img, tel, price, city);
+        // console.log(title, description, img, tel, price, city);
 
         this.apiService.createAd(title, description, price, img, tel, city)
         .subscribe(() => {

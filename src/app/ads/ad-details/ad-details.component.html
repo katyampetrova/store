@@ -15,7 +15,7 @@
       <p>Град: {{ad?.city}}</p>
       <p>Телрфон за връзка: {{ad?.tel}}</p>
       <p><span>{{ad?.price}} лева</span></p>
-      <button>Редактирай</button>
+      <button [routerLink]="['/ads/edit/', ad?._id]">Редактирай</button>
       <button>Изтрий</button>
     </div>    
   </div>

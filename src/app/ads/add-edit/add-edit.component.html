@@ -1,12 +1,12 @@
 <div class="container">
-    <h3>Създай нова обява</h3>
+    <h3>Редактирай обявата</h3>
     
-    <form #form="ngForm" id="create-form" (ngSubmit)="createHandler(form)">
+    <form #form="ngForm" id="create-form" (ngSubmit)="editHandler(form)">
       <div class="form-field">
         <label for="title">
           Заглавие
         </label>
-        <input #titleInput="ngModel" ngModel type="text" name="title" id="title" size="50" required />
+        <input #titleInput="ngModel" ngModel  [(ngModel)]="ad!.title" type="text" name="title" id="title" size="50" required ngValue="akkk"  />
       </div>
       <ng-container *ngIf="titleInput.touched">
         <p *ngIf="titleInput.errors?.['required']">Полето е задължително</p>
@@ -16,9 +16,8 @@
         <label for="desc">
           Описание
         </label>
-        <textarea #descInput="ngModel" rows="5" ngModel type="text" name="description" id="description" required></textarea>
+        <textarea #descInput="ngModel" rows="5" ngModel [(ngModel)]="ad!.description" type="text" name="description" id="description" required></textarea>
       </div>
-
       <ng-container *ngIf="descInput.touched">
         <p *ngIf="descInput.errors?.['required']">Полето е задължително</p>
       </ng-container>
@@ -27,7 +26,7 @@
         <label for="desc">
           Снимка
         </label>
-        <input #imgInput="ngModel" ngModel type="text" name="img" id="img" required />
+        <input #imgInput="ngModel" ngModel type="text" name="img" [(ngModel)]="ad!.img" id="img" required />
       </div>
 
       <ng-container *ngIf="imgInput.touched">
@@ -38,7 +37,7 @@
         <label for="tel">
           Телефон за връзка
         </label>
-        <input #telInput="ngModel" ngModel type="number" name="tel" id="tel" required />
+        <input #telInput="ngModel" ngModel [(ngModel)]="ad!.tel" type="number" name="tel" id="tel" required />
       </div>
 
       <ng-container *ngIf="telInput.touched">
@@ -49,7 +48,7 @@
         <label for="price">
           Цена
         </label>
-        <input #priceInput="ngModel" ngModel type="number" name="price" id="price" required />
+        <input #priceInput="ngModel" ngModel [(ngModel)]="ad!.price" type="number" name="price" id="price" required />
       </div>
 
       <ng-container *ngIf="priceInput.touched">
@@ -60,7 +59,7 @@
         <label for="city">
           Град
         </label>
-        <input #cityInput="ngModel" ngModel type="text" name="city" id="city" required />
+        <input #cityInput="ngModel" ngModel [(ngModel)]="ad!.city" type="text" name="city" id="city" required />
       </div>
 
       <ng-container *ngIf="cityInput.touched">
@@ -68,7 +67,7 @@
       </ng-container>
       
       <div id="form-submit">
-        <input [disabled]="form.invalid" type="submit" value="Добави обявата" />
+        <input [disabled]="form.invalid" type="submit" value="Запази" />
       </div>
     </form>
 </div>
