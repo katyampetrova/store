@@ -29,9 +29,9 @@ export class AppInterceptor implements HttpInterceptor {
         switchMap(([err, user]) => {
           if (err.status === 401) {
             if (!user) {
-              this.router.navigate(['/auth/login']);
+            //   this.router.navigate(['/auth/login']);
             } else {
-              this.router.navigate(['/auth/no-permissions']);
+            //   this.router.navigate(['/auth/no-permissions']);
             }
           } else {
             this.apiError.next(err);
