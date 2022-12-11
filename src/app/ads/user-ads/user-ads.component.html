@@ -1,6 +1,6 @@
 <div class="main">
     <h1>Моите обяви</h1>
-    <ul class="cards">
+    <ul *ngIf="ads?.length" class="cards">
         <li class="cards_item" *ngFor="let ad of ads">
             <div class="card">
                 <a [routerLink]="['/ads/details/', ad._id]">
@@ -15,5 +15,7 @@
             </div>
         </li>
     </ul>
-    <!-- <h2 *ngIf="!ads">Все още нямате добавени обяви</h2> -->
+    <h2 *ngIf="!ads?.length" class="no-ads">Все още нямате добавени обяви</h2>
+    <button routerLink="/ads/create" class="btn card_btn no-ads-button">Създайте първата си обява</button>
+
 </div>

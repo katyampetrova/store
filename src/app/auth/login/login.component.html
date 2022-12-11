@@ -23,6 +23,7 @@
         <p *ngIf="emailInput.errors?.['required']">Error</p>
       </ng-container>
       
+      <div class="ng-invalid" *ngIf="authErr">Грешно потребителско име или парола</div>
       <div id="form-submit">
         <input [disabled]="form.invalid" type="submit" value="Влез" />
       </div>

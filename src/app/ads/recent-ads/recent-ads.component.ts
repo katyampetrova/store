@@ -19,7 +19,7 @@ export class RecentAdsComponent implements OnInit {
                 this.ads = value;
             },
             error: (err) => {
-                console.log(err);
+                // console.log(err);
             }
         })
     }

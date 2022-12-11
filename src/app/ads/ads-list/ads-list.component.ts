@@ -19,7 +19,10 @@ export class AdsListComponent implements OnInit {
                 this.ads = value;
             },
             error: (err) => {
-                console.log(err);
+                // console.log(err);
+                if(err.status == 401) {
+                    console.log('wqdqwdjkqwhdkjhqwkjdhkj');
+                }
             }
         })
     }

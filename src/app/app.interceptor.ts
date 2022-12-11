@@ -35,7 +35,7 @@ export class AppInterceptor implements HttpInterceptor {
             }
           } else {
             this.apiError.next(err);
-            this.router.navigate(['/error']);
+            // this.router.navigate(['/error']);
           }
           return throwError(() => err);
         })

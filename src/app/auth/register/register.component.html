@@ -36,16 +36,20 @@
         <p *ngIf="passwordInput.errors?.['required']">Полето е задължително</p>
         <p *ngIf="passwordInput.errors?.['minlength']">Паролата трябва да е дълга поне 6 символа</p>
       </ng-container> -->
+
+      <div *ngIf="form.invalid && form.dirty">Всички полета са задължителни</div>
+
+      <div *ngIf="authErr">{{authErrMessage}}</div>
       
       <div id="form-submit">
-        <input type="submit" value="Регистрирай се" />
+        <input  [disabled]="form.invalid"  type="submit" value="Регистрирай се" />
       </div>
     </form>
   
   <div id="register-link">
     <span>
         Вече имаш акаунт?
-      <a href="#">
+      <a routerLink="/auth/register">
         Вход
       </a>
     </span>

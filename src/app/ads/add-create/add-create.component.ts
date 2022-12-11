@@ -10,10 +10,15 @@ import { ApiService } from 'src/app/api.service';
 })
 export class AddCreateComponent {
 
+    formErrors: boolean = false;
+
     constructor(private apiService: ApiService, private router: Router) {}
 
     createHandler(form: NgForm): void {
-      if(form.invalid) {return;}
+        if(form.invalid) {
+            this.formErrors = true;
+            return;
+        }
         const {title, description, price, img, tel, city } = form.value;
 
         // console.log(title, description, img, tel, price, city);

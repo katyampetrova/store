@@ -66,9 +66,11 @@
       <ng-container *ngIf="cityInput.touched">
         <p *ngIf="cityInput.errors?.['required']">Полето е задължително</p>
       </ng-container>
+
+      <div *ngIf="form.invalid && form.dirty">Всички полета са задължителни</div>
       
       <div id="form-submit">
-        <input [disabled]="form.invalid" type="submit" value="Добави обявата" />
+        <input class="submit" type="submit" value="Добави обявата" />
       </div>
     </form>
 </div>

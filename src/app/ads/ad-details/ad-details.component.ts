@@ -20,8 +20,8 @@ export class AdDetailsComponent implements OnInit {
         this.ad = this.activatedRoute.snapshot.data?.['ad'];
         this.user = this.authService.user;
 
-        console.log(this.ad);
-        console.log(this.user);
+        // console.log(this.ad);
+        // console.log(this.user);
 
         if (this.ad?._ownerId == this.user?._id) {
             this.isOwner = true;

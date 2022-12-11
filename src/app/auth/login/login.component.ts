@@ -11,17 +11,13 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
     // @ViewChild('form', {static: true}) form!: ElementRef<HTMLInputElement>;
 
+    authErr: boolean = false;
+
     constructor(private router: Router, private authService: AuthService) { 
   
     }
 
     loginHandler(form: NgForm): void {
-        // console.log(form);
-        // this.authService.user = {
-        //     email: 'hswq@abv.bg',
-        //     password: 'john'
-        // } as any;
-        // this.router.navigate(['/']);
 
         if (form.invalid) {
             return;
@@ -29,11 +25,16 @@ export class LoginComponent {
     
         const {email, password} = form.value;
         this.authService.login(email, password)
-        .subscribe(user => {
-            // console.log(user);
+        .subscribe({
+            next: (user) => {
             this.authService.user = user;
             this.router.navigate(['/']);
+            },
+            error: (err) => {
+                if (err.status === 401) {
+                    this.authErr = true;
+                }
+            }
         });
     }
-
 }
