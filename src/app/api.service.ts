@@ -45,6 +45,6 @@ export class ApiService {
     }
 
     deleteAd(id: string) {
-        return this.httpClient.delete<IAd>('/api/data/catalog' + id);
+        return this.httpClient.delete<IAd>('/api/data/catalog/' + id);
     }
 }
