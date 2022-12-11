@@ -5,6 +5,7 @@ import { AddCreateComponent } from "./add-create/add-create.component";
 import { AddEditComponent } from "./add-edit/add-edit.component";
 import { AdsListComponent } from "./ads-list/ads-list.component";
 import { AdsResolver } from "./ads.resolver";
+import { UserAdsComponent } from "./user-ads/user-ads.component";
 
 const routes: Routes = [
     {
@@ -42,6 +43,10 @@ const routes: Routes = [
         //     loginRequired: false
         // }
     },
+    {
+        path: 'ads/my-ads',
+        component: UserAdsComponent
+    }
 ];
 
 export const AdsRoutingModule = RouterModule.forChild(routes);

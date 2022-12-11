@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ShortenPipe } from '../shared/shorten.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { AddEditComponent } from './add-edit/add-edit.component';
+import { UserAdsComponent } from './user-ads/user-ads.component';
 
 
 
@@ -18,7 +19,8 @@ import { AddEditComponent } from './add-edit/add-edit.component';
     AdDetailsComponent,
     AdsListComponent,
     AddCreateComponent,
-    AddEditComponent
+    AddEditComponent,
+    UserAdsComponent
   ],
   imports: [
     CommonModule,

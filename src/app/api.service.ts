@@ -20,6 +20,10 @@ export class ApiService {
     loadAd(id: number) {
         return this.httpClient.get<IAd>(`/api/data/catalog/${id}`);
     }
+
+    loadUserAds(id: string) {
+        return this.httpClient.get<IAd[]>(`/api/data/catalog/${id ? `?userId=${id}` : ``}`);
+    }
   
     createAd(title: string, description: string, price: number, img: string, tel: number, city: string) {
         return this.httpClient.post<IAd>('/api/data/catalog', {

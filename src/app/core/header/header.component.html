@@ -3,7 +3,7 @@
         <nav>
         <a class="active" href="#">Начало</a>
         <a routerLink="/ads/list">Всички обяви</a>
-        <a *ngIf="isLoggedIn" routerLink="/test/route">Моите обяви</a>
+        <a *ngIf="isLoggedIn" routerLink="/ads/my-ads">Моите обяви</a>
         <a *ngIf="isLoggedIn" routerLink="/ads/create">Създай обява</a>
         <a *ngIf="!isLoggedIn" routerLink="/auth/login" class="boredered">Влез</a>
         <a *ngIf="!isLoggedIn" routerLink="/auth/register" class="boredered">Регистрирай се</a>
