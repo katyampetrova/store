@@ -32,7 +32,7 @@ export class RegisterComponent {
         },
         error: (err) => {
             if (err.status) {
-                console.log(err);
+                // console.log(err);
                 this.authErr = true;
                 this.authErrMessage = err.error.message;
             }

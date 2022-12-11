@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, catchError, filter, of, Subscription, tap } from 'rxjs';
 import { IUser } from '../interfaces/user';
@@ -9,13 +9,13 @@ import { IUser } from '../interfaces/user';
 
 export class AuthService implements OnDestroy {
 
-    private user$$ = new BehaviorSubject<undefined | null | IUser>(undefined);
+    private user$$ = new BehaviorSubject<undefined | null | IUser | HttpErrorResponse>(undefined);
 
     user$ = this.user$$.asObservable().pipe( filter((val): val is IUser | null => val !== undefined));
     user: IUser | null = null;
 
     get isLoggedIn() {
-        return this.user !== null;
+        return this.user !== null && this.user.status !== 401;
     } 
 
     subscription: Subscription;

@@ -21,7 +21,7 @@ export class AdsListComponent implements OnInit {
             error: (err) => {
                 // console.log(err);
                 if(err.status == 401) {
-                    console.log('wqdqwdjkqwhdkjhqwkjdhkj');
+                    // console.log('wqdqwdjkqwhdkjhqwkjdhkj');
                 }
             }
         })
