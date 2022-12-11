@@ -34,7 +34,8 @@ h1 {
 }
 
 img {
-  height: auto;
+  width: 350px;
+  height: 350px;
   max-width: 100%;
   vertical-align: middle;
 }
@@ -117,4 +118,16 @@ img {
     font-size: 13px;
     margin-top: 35px;
     text-align: center;
+}
+
+.card > a {
+    text-decoration: none;
+}
+
+.price {
+    background-color: #009400;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 7px;
+    color: white;
 }

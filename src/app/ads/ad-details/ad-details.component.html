@@ -13,7 +13,7 @@
       <h2>{{ad?.title}}</h2>
       <p>{{ad?.description}}</p>
       <p>Град: {{ad?.city}}</p>
-      <p>Телрфон за връзка: {{ad?.tel}}</p>
+      <p>Телефон за връзка: {{ad?.tel}}</p>
       <p><span>{{ad?.price}} лева</span></p>
       <div *ngIf="isOwner">
         <button [routerLink]="['/ads/edit/', ad?._id]">Редактирай</button>

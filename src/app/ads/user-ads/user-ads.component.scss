@@ -35,9 +35,10 @@ h1 {
 }
 
 img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+    width: 350px;
+    height: 200px;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 .btn {
@@ -79,7 +80,7 @@ img {
 
 @media (min-width: 56rem) {
   .cards_item {
-    width: 33.3333%;
+    width: 25%;
   }
 }
 
@@ -129,4 +130,16 @@ img {
 
 .no-ads-button {
     text-decoration: underline;
+}
+
+.card > a {
+    text-decoration: none;
+}
+
+.price {
+    background-color: #009400;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 7px;
+    color: white;
 }

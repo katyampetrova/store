@@ -7,9 +7,9 @@
                 <div class="card_image"><img src={{ad.img}}></div>
                 <div class="card_content">
                     <h2 class="card_title">{{ad.title}}</h2>
-                    <p class="card_text">{{ad.description | shorten: 30}}</p>
-                    <p class="card_text">{{ad.price}}</p>
-                    <button class="btn card_btn">Read More</button>
+                    <p class="card_text">{{ad.description | shorten: 200}}</p>
+                    <p class="card_text price">{{ad.price}} лева</p>
+                    <!-- <button class="btn card_btn">Read More</button> -->
                 </div>
             </a>
         </div>

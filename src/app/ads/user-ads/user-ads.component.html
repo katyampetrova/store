@@ -7,15 +7,16 @@
                     <div class="card_image"><img src={{ad.img}}></div>
                         <div class="card_content">
                         <h2 class="card_title">{{ad.title}}</h2>
-                        <p class="card_text">{{ad.description}}</p>
-                        <p class="card_text">{{ad.price}}</p>
+                        <p class="card_text">{{ad.description | shorten: 200}}</p>
+                        <p class="card_text price">{{ad.price}} лева</p>
                         <!-- <button class="btn card_btn">Read More</button> -->
                     </div>
                 </a>
             </div>
         </li>
     </ul>
-    <h2 *ngIf="!ads?.length" class="no-ads">Все още нямате добавени обяви</h2>
-    <button routerLink="/ads/create" class="btn card_btn no-ads-button">Създайте първата си обява</button>
-
+    <div *ngIf="!ads?.length">
+        <h2 class="no-ads">Все още нямате добавени обяви</h2>
+        <button routerLink="/ads/create" class="btn card_btn no-ads-button">Създайте първата си обява</button>
+    </div>
 </div>
